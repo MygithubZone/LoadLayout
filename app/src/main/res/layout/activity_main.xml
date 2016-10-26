@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.z.loadlayout.MainActivity">
+
+    <com.z.loadlayoutlibrary.LoadLayout
+        android:id="@+id/loadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentView="@+id/content"
+        app:emptyView="@+id/empty"
+        app:errorView="@+id/error"
+        app:loadingView="@+id/loading">
+
+        <LinearLayout
+            android:id="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="这是主页面" />
+        </LinearLayout>
+
+        <include
+            android:id="@id/empty"
+            layout="@layout/empty_view"></include>
+
+        <include
+            android:id="@id/error"
+            layout="@layout/error_view"></include>
+
+        <include
+            android:id="@id/loading"
+            layout="@layout/loading_view"></include>
+    </com.z.loadlayoutlibrary.LoadLayout>
+</RelativeLayout>

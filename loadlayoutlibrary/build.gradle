@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+//发布到bintray配置
+apply plugin: 'com.novoda.bintray-release'
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+    lintOptions {
+
+        abortOnError false
+    }//有时需要app下面的gradle也配置此项,发生错误是不停止,这样才可以
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+//发布到bintray
+publish {
+    userOrg = 'zxyaust'
+    groupId = 'com.z'
+    artifactId = 'LoadLayout'
+    publishVersion = '1.0.0'
+    desc = 'show empty layout,error layout,loading layout'
+    website = 'https://github.com/zxyaust/LoadLayout'
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+}
+android {
+    lintOptions {
+        abortOnError false
+    }
+}
+//发布到bintray
+task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
+}
