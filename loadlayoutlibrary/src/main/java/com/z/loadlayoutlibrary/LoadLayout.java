@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import org.xmlpull.v1.XmlPullParserException;
+
 
 /**
  * Created by bruce on 8/19/15.
@@ -43,9 +45,15 @@ public class LoadLayout extends FrameLayout {
             errorView = findViewById(errorViewId);
         if (loadingViewId != -1)
             loadingView = findViewById(loadingViewId);
-        if (contentViewId != -1)
+        if (contentViewId != -1) {
             contentView = findViewById(contentViewId);
-        updateViewVisibility(new View(getContext()));
+            try {
+                throw new XmlPullParserException("don't have a contentView");
+            } catch (XmlPullParserException e) {
+                e.printStackTrace();
+            }
+        }
+        updateViewVisibility(contentView);
     }
 
     public void showEmpty() {
