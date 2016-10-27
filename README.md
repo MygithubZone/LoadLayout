@@ -3,11 +3,12 @@
 标签（空格分隔）： 未分类
 
 ---
+当前版本1.1.0,修复布局中有fragment不能正常工作的bug
 ![示意图][1]
 #1.使用方法
 ##1.引用
 ```
-compile 'com.z:LoadLayout:1.0.0'
+compile 'com.z:LoadLayout:1.1.0'
 ```
 ##2.布局中使用
 ```

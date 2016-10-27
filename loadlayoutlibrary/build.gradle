@@ -27,8 +27,8 @@ publish {
     userOrg = 'zxyaust'
     groupId = 'com.z'
     artifactId = 'LoadLayout'
-    publishVersion = '1.0.0'
-    desc = 'show empty layout,error layout,loading layout'
+    publishVersion = '1.1.0'
+    desc = 'v1.1.0 show empty layout,error layout,loading layout'
     website = 'https://github.com/zxyaust/LoadLayout'
 }
 dependencies {
