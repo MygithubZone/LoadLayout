@@ -70,6 +70,8 @@ mLoadlayoutLoadLayout.showLoading();//显示加载中界面
 ```
 #4.应用范围
 任何布局中都可以套用,不存在冲突等问题,主要用于需要网络加载的页面,可根据网络情况显示不同的界面
+#5.感谢,原作者基础上进行修改完善,代码更加简化健壮
+https://github.com/lzyzsd/LoadingLayout
 
 
   [1]: https://github.com/zxyaust/LoadLayout/blob/master/2016-10-26_14_17_01.gif?raw=true
